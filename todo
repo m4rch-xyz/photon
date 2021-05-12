@@ -1,0 +1,47 @@
+[ content ]
+	- settings
+		- advanced settings @4
+			- add "allow overlap" for sync (and matrix?)
+			- no auto zone with all devices
+			- server list (ips) (auto connect to all locals checkboxs)
+		- selected tab on startup @3
+		- dev tab @2
+			- start, stop, restart, install, uninstall, reinstall, recompile backend
+	- profile on startup @2
+	- device matrix @1
+	- if no zone then zone with all devices @2
+	- autoselect mode if zone changes and device @1
+	- select all devices new zone button @2
+	- grab new data after reconnect with backend
+[ ui ]
+	- maybe use hsl and stuff for css
+	- outsource colors @2
+	- labels device @1
+	- themes @3
+	- overwork colors @2
+	- profile scroll ?
+	- color patches @2
+	- svg @4
+	- replace zone save mode
+	- style new zone
+	- style disabled devices new zone
+	- device active zone style @2
+	- font: mono @3
+[ bugs ]
+	- service: fix install on compiled version
+	- zones do not reload @1
+	- changed device location breaks app (after rework only removed devices)
+	- convert device colors from rgb to hex
+[ misc ]
+	- grey out if zone not selected @2
+	- rename classes @4
+	- shortcuts @3
+	- replace try readFile with if existsSync @2
+	- maybe use path.join/resolve @2 ?
+	- service: only one admin prompt on install/uninstall
+	- directly upload themes and custom modes @5
+	- var name change @4
+	- sort vars @4
+	- #key and index in device @2
+	- getContext @2
+	- port @1
