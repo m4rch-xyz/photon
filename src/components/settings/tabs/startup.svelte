@@ -4,7 +4,7 @@
 	let tab = options.tab || "sync"
 
 	function setTab () {
-		fetch(`http://localhost:3000/settings/startup/`, {
+		fetch(`http://localhost:1872/settings/startup/`, {
 			method: "POST",
 			headers: {
       			"Content-Type": "application/json"

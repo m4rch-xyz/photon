@@ -26,7 +26,7 @@
 			}
 		}
 
-		let res = await fetch("http://localhost:3000/sync/set/", {
+		let res = await fetch("http://localhost:1872/sync/set/", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -49,7 +49,7 @@
 	}
 
 	async function del () {
-		let res = await fetch("http://localhost:3000/sync/delete/", {
+		let res = await fetch("http://localhost:1872/sync/delete/", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"

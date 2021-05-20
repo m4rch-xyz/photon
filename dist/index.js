@@ -1,6 +1,5 @@
 const { app, BrowserWindow, globalShortcut } = require("electron")
 const path = require("path")
-const serviceControl = require("./serviceControl.js")
 
 if (require("electron-squirrel-startup")) {
 	app.quit()
@@ -50,14 +49,3 @@ if (process.argv.includes("--dev")) {
 		awaitWriteFinish: true
 	})
 }
-
-
-
-// (async () => {
-// 	let state = await serviceControl.check()
-// 	if (state == "not installed") {
-// 		serviceControl.install()
-// 	} else if (state == "stopped") {
-// 		serviceControl.start()
-// 	}
-// })()

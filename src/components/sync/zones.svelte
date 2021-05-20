@@ -79,7 +79,7 @@ import { loop_guard } from "svelte/internal";
 	}
 
 	async function addZone () {
-		let res = await fetch("http://localhost:3000/sync/new", {
+		let res = await fetch("http://localhost:1872/sync/new", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -113,7 +113,7 @@ import { loop_guard } from "svelte/internal";
 			zoneName: nOldName,
 		}
 		if (nOldName != nName) body.newZoneName
-		let res = await fetch("http://localhost:3000/sync/set", {
+		let res = await fetch("http://localhost:1872/sync/set", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"

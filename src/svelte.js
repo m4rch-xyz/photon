@@ -2,11 +2,11 @@ import App from "./main.svelte"
 
 function fetchAll () {
 	return [
-		fetch("http://localhost:3000/devices/", { method: "GET" }),
-		fetch("http://localhost:3000/sync/modes/", { method: "GET" }),
-		fetch("http://localhost:3000/profiles/", { method: "GET" }),
-		fetch("http://localhost:3000/settings/", { method: "GET" }),
-		fetch("http://localhost:3000/sync/zones/", { method: "GET" })
+		fetch("http://localhost:1872/devices/", { method: "GET" }),
+		fetch("http://localhost:1872/sync/modes/", { method: "GET" }),
+		fetch("http://localhost:1872/profiles/", { method: "GET" }),
+		fetch("http://localhost:1872/settings/", { method: "GET" }),
+		fetch("http://localhost:1872/sync/zones/", { method: "GET" })
 	]
 }
 
@@ -25,7 +25,7 @@ const getAll = () => new Promise(async ( resolve ) => {
 })
 
 function checkState () {
-	return fetch("http://localhost:3000/status/", { method: "GET" })
+	return fetch("http://localhost:1872/status/", { method: "GET" })
 }
 
 const app = new App({

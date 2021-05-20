@@ -16,7 +16,7 @@
 			name = `new-${num}`
 		}
 
-		fetch("http://localhost:3000/profiles/save", {
+		fetch("http://localhost:1872/profiles/save", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"

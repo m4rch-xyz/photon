@@ -1,5 +1,9 @@
-( v 2021-05-13 )
+( v 2021-05-21 )
 [ content ]
+	- changed port	
 [ ui ]
 [ fixes ]
 [ misc ]
+	- clean up
+	- service outsourced to installer
+	- unnecessary packages/files removed

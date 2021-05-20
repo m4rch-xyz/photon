@@ -20,7 +20,7 @@
 	function send () {
 		if (!selectedZone) return
 
-		fetch(`http://localhost:3000/sync/set/`, {
+		fetch(`http://localhost:1872/sync/set/`, {
 			method: "POST",
 			headers: {
       			"Content-Type": "application/json"
@@ -46,7 +46,7 @@
 
 
 <div class="main">
-	{#if current.length}
+	{#if current?.length}
 		<select bind:value={index} class="select">
 			{#each modes as [ name ], i}
 				<option value={i}>{name.slice(0, -3).replace("_", " ")}</option>

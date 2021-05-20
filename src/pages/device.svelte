@@ -20,7 +20,7 @@
 	$: global.sync.zones = zones
 
 	function send () {
-		fetch(`http://localhost:3000/device/${device.deviceId}/${mode.id}`, {
+		fetch(`http://localhost:1872/device/${device.deviceId}/${mode.id}`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -32,7 +32,7 @@
 	async function removeDevice () {
 		let zone = zones.find(zone => zone[1].deviceList.includes(device.location) && zone[1].active)
 
-		let res = await fetch("http://localhost:3000/sync/set", {
+		let res = await fetch("http://localhost:1872/sync/set", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -57,7 +57,7 @@
 	async function stopZone () {
 		let zone =  zones.find(zone => zone[1].deviceList.includes(device.location) && zone[1].active) //unlink vars
 
-		let res = await fetch("http://localhost:3000/sync/set/", {
+		let res = await fetch("http://localhost:1872/sync/set/", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"

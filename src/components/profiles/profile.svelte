@@ -22,7 +22,7 @@
 		}
 
 		edit = false
-		let res = await fetch("http://localhost:3000/profiles/rename/", {
+		let res = await fetch("http://localhost:1872/profiles/rename/", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -50,7 +50,7 @@
 	}
 
 	async function del () {
-		let res = await fetch("http://localhost:3000/profiles/delete/", {
+		let res = await fetch("http://localhost:1872/profiles/delete/", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -70,7 +70,7 @@
 	}
 
 	function overwrite () {
-		fetch("http://localhost:3000/profiles/save/", {
+		fetch("http://localhost:1872/profiles/save/", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -80,7 +80,7 @@
 	}
 
 	async function load () {
-		await fetch("http://localhost:3000/profiles/load/", {
+		await fetch("http://localhost:1872/profiles/load/", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -88,7 +88,7 @@
 			body: JSON.stringify({ name })
 		})
 
-		let zones = await fetch("http://localhost:3000/sync/zones", { method: "GET" })
+		let zones = await fetch("http://localhost:1872/sync/zones", { method: "GET" })
 		global.sync.zones = await zones.json()
 
 		dispatch("message", {
